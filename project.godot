@@ -16,8 +16,5 @@ _global_script_class_icons={
 [application]
 
 config/name="xXconneXx"
+run/main_scene="res://game.tscn"
 config/icon="res://icon.png"
-
-[rendering]
-
-environment/default_environment="res://default_env.tres"
