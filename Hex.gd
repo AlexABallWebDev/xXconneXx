@@ -3,6 +3,11 @@ extends Node2D
 # color drawn to this hex
 var color
 
+var is_x = false
+
+var x
+var y
+
 var hex_dot_image
 var hex_x_image
 
@@ -25,9 +30,12 @@ func _on_click():
 	color = global.cursor_color
 	$Sprite.texture = hex_dot_image
 	$Sprite.modulate = color
+	$"/root/Game".check_solutions()
 	
 func change_color(new_color):
+	color = new_color
 	$Sprite.modulate = new_color
 
 func set_x():
 	$Sprite.texture = hex_x_image
+	is_x = true
